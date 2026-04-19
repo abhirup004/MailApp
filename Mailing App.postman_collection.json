@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "54d719d1-5fcc-49b4-8f9e-1a2b9614aa2a",
+		"name": "Mailing App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3446538"
+	},
+	"item": [
+		{
+			"name": "send_simple_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipient\": \"sen.jbbusiness@gmail.com\",\r\n    \"msgBody\": \"Hey!!\\n\\nThis is a simple test email.\\n\\nThanks\",\r\n    \"subject\": \"Simple testing email\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/send_simple_email",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"send_simple_email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_email_with_attachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipient\": \"sen.jbbusiness@gmail.com\",\r\n    \"msgBody\": \"Hey!!\\n\\nThis is a test email with attachment.\\nPFA...\\n\\nThanks\",\r\n    \"subject\": \"Simple testing email\",\r\n    \"attachment\": \"C:/Users/User/Downloads/Session_15_Notes.txt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/send_email_with_attachment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"send_email_with_attachment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
